@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> YUH IS THE BEST!!
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <div class="button-container">
+            <a href="https://www.roblox.com/users/3401799906/profile?friendshipSourceType=PlayerSearch" class="button">Roblox</a>
+            <a href="https://www.tiktok.com/@crushedhigh_1?_t=ZT-8u2E3raQsqk&_r=1" class="button">tiktok</a>
+            <a href="https://discord.gg/C7KWsgXn" class="button">discord</a>
+        
+        </div>
+    </div>
+</body>
+</html>
 
+<!-- Time Display -->
+<div id="timeDisplay"></div>
+
+<script>
+    function updateTime() {
+        let now = new Date();
+        let options = { timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+        let timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+        document.getElementById('timeDisplay').innerText = "Current CST Time: " + timeString;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
